@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: rgb(226, 223, 218);
+      }
+       /* * {
+        border: 1px solid black;
+      } */
+      .flex {
+        display: flex;
+      }
+      .baise {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8{
+        margin: 8px;
+      }
+      .mgr8{
+        margin-right: 8px;
+      }
+      .mgt8{
+        margin-top: 8px;
+      }
+      .yinying{
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 150px; z-index: 2;" class="baise yinying "></div>
+    <!-- 主区域 -->
+    <div class="flex1 flex column">
+      <!-- 顶部栏 -->
+      <div style="height: 60px ;z-index: 1;" class="baise yinying"></div>
+      <!-- 内容区 -->
+      <div style="overflow: auto;" class="flex1 flex">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex">
+            <!-- 数据块 -->
+            <div style="height: 100px" class="baise yinying flex1 mgr8"></div>
+            <div style="height: 100px" class="baise yinying flex1 mgr8"></div>
+            <div style="height: 100px" class="baise yinying flex1 mgr8"></div>
+            <div style="height: 100px" class="baise yinying flex1 mgr8"></div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flex column">
+            <!-- 列表项 -->
+            <div style="height: 160px" class="baise mgr8 mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgr8 mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgr8 mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgr8 mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgr8 mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgr8 mgt8 yinying"></div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="column mgt8 mgr8 youqu">
+          <!-- 消息区 -->
+          <div style="height: 150px" class="baise yinying"></div>
+          <!-- 提示区 -->
+          <div style="height: 300px" class="baise mgt8 yinying"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
